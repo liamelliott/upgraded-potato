@@ -27,9 +27,10 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use((req, res, next) => {
-    res.render('maintenance.hbs', {});
-});
+// Can prevent app execution by not calling next
+// app.use((req, res, next) => {
+//     res.render('maintenance.hbs', {});
+// });
 
 app.use(express.static(__dirname + '/public'));
 
