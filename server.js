@@ -51,6 +51,23 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects', {
+        pageTitle: 'Projects',
+        headerText: 'Look at all of the projects',
+        projects: [
+            {
+                name: 'The Best SaaS',
+                author: 'Liam Elliott'
+            },
+            {
+                name: 'Of Course!',
+                author: 'Barbara Streisand'
+            }
+        ]
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Unable to get the data, you piece of human trash!'
